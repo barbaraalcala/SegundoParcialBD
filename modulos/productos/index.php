@@ -26,7 +26,7 @@ if (!isset($_SESSION["id"]) && !isset($_SESSION["nombre"]) && !isset($_SESSION["
         <div class="col-md-12 row">
             <?php
 
-            //TABLA USUARIOS
+            //TABLA PRODUCTOS
             $consulta = "SELECT * FROM productos";
             $resultado = mysqli_query($mysqli, $consulta);
             while ($fila = mysqli_fetch_array($resultado)) {
