@@ -26,27 +26,32 @@ if(!isset($_SESSION["id"]) && !isset($_SESSION["nombre"]) && !isset($_SESSION["s
 
   <div class="form-group">
       <label for="nombre">Nombre</label>
-      <input type="text" name="nombre" id="nombre" placeholder="Ingresa tu nombre">    
+      <input type="text" name="nombre_usuarios" id="nombre" placeholder="Ingresa tu nombre">    
   </div>
 
    <div class="form-group">
       <label for="telefono">Telefono</label>
-      <input type="tel" name="telefono" id="nombre" placeholder="Ingresa tu telefono">    
+      <input type="tel" name="telefono_usuarios" id="nombre" placeholder="Ingresa tu telefono">    
   </div>
 
   <div class="form-group">
       <label for="direccion">Direccion</label>
-      <input type="text" name="direccion" id="nombre" placeholder="Ingresa tu direccion">    
+      <input type="text" name="direccion_usuarios" id="nombre" placeholder="Ingresa tu direccion">    
   </div>
 
    <div class="form-group">
       <label for="correo">Correo electronico</label>
-      <input type="email" name="correo" id="nombre" placeholder="Ingresa tu correo">    
+      <input type="email" name="correo_usuarios" id="correo_usuarios" placeholder="Ingresa tu correo">    
   </div>
 
   <div class="form-group">
       <label for="contraseña">Contraseña</label>
-      <input type='contraseña' name="contraseña" class="form-control" id="nombre" placeholder="Ingresa tu contraseña">    
+      <input type='contraseña' name="contraseña_usuarios" class="form-control" id="contraseña_usuarios" placeholder="Ingresa tu contraseña">    
+  </div>
+
+  <div class="form-group">
+      <label for="status">Status</label>
+      <input type="text" name="status_usuarios" id="status_usuarios" placeholder="Ingresa tu status">    
   </div>
 
 <div class="form-group">

@@ -31,27 +31,32 @@ if(!isset($_SESSION["id"]) && !isset($_SESSION["nombre"]) && !isset($_SESSION["s
 
   <div class="form-group">
       <label for="nombre">Nombre</label>
-      <input type="text" name="nombre" id="nombre" value="<?php echo $fila["nombre_usuarios"]; ?>">    
+      <input type="text" name="nombre_usuarios" id="nombre_usuarios" value="<?php echo $fila["nombre_usuarios"]; ?>">    
   </div>
 
    <div class="form-group">
       <label for="telefono">Telefono</label>
-      <input type="tel" name="telefono" id="nombre" value="<?php echo $fila["telefono_usuarios"]; ?>">    
+      <input type="tel" name="telefono_usuarios" id="telefono_usuarios" value="<?php echo $fila["telefono_usuarios"]; ?>">    
   </div>
 
   <div class="form-group">
       <label for="direccion">Direccion</label>
-      <input type="text" name="direccion" id="nombre" value="<?php echo $fila["direccion_usuarios"];?>">    
+      <input type="text" name="direccion_usuarios" id="direccion_usuarios" value="<?php echo $fila["direccion_usuarios"];?>">    
   </div>
 
    <div class="form-group">
       <label for="correo">Correo electronico</label>
-      <input type="email" name="correo" id="nombre" value="<?php echo $fila["correo_usuarios"];?>">    
+      <input type="email" name="correo_usuarios" id="nombre" value="<?php echo $fila["correo_usuarios"];?>">    
   </div>
 
   <div class="form-group">
       <label for="password">Contraseña</label>
-      <input type='password' name="password" class="form-control" id="nombre" value="<?php echo $fila["contraseña_usuarios"]; ?>">    
+      <input type='password' name="contraseña_usuarios" class="form-control" id="contraseña_usuarios" value="<?php echo $fila["contraseña_usuarios"]; ?>">    
+  </div>
+
+  <div class="form-group">
+      <label for="status">Status</label>
+      <input type="text" name="status_usuarios" id="status_usuarios" placeholder="Ingresa tu status" value="<?php echo $fila["status_usuarios"]; ?>">    
   </div>
 
   <input type="hidden" name="id" id="id" value="<?php echo $id ?>">

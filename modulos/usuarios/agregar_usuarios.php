@@ -8,11 +8,12 @@ $telefono = $_POST['telefono_usuarios'];
 $direccion = $_POST['direccion_usuarios'];
 $correo = $_POST['correo_usuarios'];
 $contraseña = $_POST['contraseña_usuarios'];
+$status = $_POST['status_usuarios'];
 
 //Construir la consulta
 //INSERT INTO (campos1, campo2, campo3) VALUES (valor1, valor2, valor3);
-$consulta ="INSERT INTO usuarios (nombre_usuarios, telefono_usuarios, direccion_usuarios, correo_usuarios, contraseña_usuarios) 
-	VALUES ('$nombre', '$telefono', '$direccion','$correo', '$contraseña')";
+$consulta ="INSERT INTO usuarios (nombre_usuarios, telefono_usuarios, direccion_usuarios, correo_usuarios, contraseña_usuarios, status_usuarios) 
+	VALUES ('$nombre', '$telefono', '$direccion','$correo', '$contraseña' , '$status')";
 
 //session_start();
 //$nombre_usuario = $_SESSION["nombre"];

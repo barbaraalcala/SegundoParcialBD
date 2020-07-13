@@ -20,7 +20,7 @@ if (!isset($_SESSION["id"]) && !isset($_SESSION["nombre"]) && !isset($_SESSION["
 <body>
     <?php require_once '../../conexion.php';
     $id = $_GET["id"];
-    $consulta = "SELECT * FROM categorias cat INNER JOIN productos prt ON prt.id_producto = cat.id_categoria INNER JOiN colores col ON col.id_colores = prt.id_producto WHERE prt.id_producto = $id";
+    $consulta = "SELECT * FROM categorias WHERE id_categoria = $id";
     $resultado = mysqli_query($mysqli, $consulta);
     while ($fila = mysqli_fetch_array($resultado)) {
     ?>

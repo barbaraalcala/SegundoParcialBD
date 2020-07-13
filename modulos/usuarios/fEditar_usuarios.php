@@ -8,11 +8,12 @@ $telefono = $_POST['telefono_usuarios'];
 $direccion = $_POST['direccion_usuarios'];
 $correo = $_POST['correo_usuarios'];
 $contraseña = $_POST['contraseña_usuarios'];
-$id = $_POST["id_usuarios"];
+$status = $_POST['status_usuarios'];
+$id = $_POST["id"];
 
 //Construir la consulta
-$consulta = "UPDATE usuarios SET nombre_usuarios = '$nombre', telefono_usuarios = '$telefono', direccion_usuarios = '$direccion', correo_usuarios = '$correo', contraseña_usuarios = '$contraseña' WHERE id_usuarios = $id"; 
-
+$consulta = "UPDATE usuarios SET nombre_usuarios = '$nombre', telefono_usuarios = '$telefono', direccion_usuarios = '$direccion', correo_usuarios = '$correo', contraseña_usuarios = '$contraseña', status_usuarios = $status WHERE id_usuarios = $id"; 
+echo $consulta;
 //Ejecutar la consulta
 mysqli_query($mysqli, $consulta);
 
