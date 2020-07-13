@@ -12,7 +12,7 @@ if (!isset($_SESSION["id"]) && !isset($_SESSION["nombre"]) && !isset($_SESSION["
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>PRODUCTOS</title>
+    <title>COLORES</title>
     <!-- CSS only -->
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css">
 </head>
@@ -22,7 +22,7 @@ if (!isset($_SESSION["id"]) && !isset($_SESSION["nombre"]) && !isset($_SESSION["
     $id = $_GET["id"];
     $consulta = "SELECT * FROM colores col INNER JOIN categorias cat ON cat.id_categoria = col.id_colores INNER JOiN productos prod ON prod.id_productos = cat.id_categoria WHERE col.id_colores = $id";
     $resultado = mysqli_query($mysqli, $consulta);
-    while ($fila = mysqli_fetch_array($resultado)) {
+    //while ($fila = mysqli_fetch_array($resultado)) {
     ?>
 
 
@@ -34,7 +34,7 @@ if (!isset($_SESSION["id"]) && !isset($_SESSION["nombre"]) && !isset($_SESSION["
 
                         <div class="form-group">
                             <label for="nombre">Nombre del color</label>
-                            <input type="text" name="nombre_colores" id="nombre_colores" value="<?php echo $fila["nombre_colores"]; ?>">
+                            <input type="text" name="nombre_colores" id="nombre_colores">
                         </div>
 
                         <input type="hidden" name="id" id="id" value="<?php echo $id; ?>">
@@ -46,7 +46,7 @@ if (!isset($_SESSION["id"]) && !isset($_SESSION["nombre"]) && !isset($_SESSION["
                 </div>
             </div>
         </div>
-    <?php } ?>
+    <?php  ?>
 
 
     <!-- JS, Popper.js, and jQuery -->

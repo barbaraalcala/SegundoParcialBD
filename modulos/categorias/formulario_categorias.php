@@ -28,7 +28,7 @@ if (!isset($_SESSION["id"]) && !isset($_SESSION["nombre"]) && !isset($_SESSION["
 
 
                     <div class="form-group">
-                        <label for="nombre">Nombre de la categoria</label>
+                        <label for="nombre_categoria">Nombre de la categoria</label>
                         <input type="text" name="nombre_categoria" id="nombre_categoria">
                     </div>
 

@@ -4,12 +4,12 @@ require_once '../../conexion.php';
 
 //Recibir datos del formulario
 $nombre=$_POST['nombre_categoria'];
-$categoria = $_POST['id_categoria'];
+//$categoria = $_POST['id_categoria'];
 
 //Construir la consulta
 //INSERT INTO (campos1, campo2, campo3) VALUES (valor1, valor2, valor3);
-$consulta ="INSERT INTO colores (nombre_categoria, id_categoria) 
-	VALUES ('$nombre, $categoria)";
+$consulta ="INSERT INTO colores (nombre_categoria) 
+	VALUES ('$nombre)";
 //echo $consulta;
 //session_start();
 //$nombre_usuario = $_SESSION["nombre"];

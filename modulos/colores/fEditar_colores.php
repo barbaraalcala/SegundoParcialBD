@@ -4,12 +4,12 @@ require_once '../../conexion.php';
 
 //Recibir datos del formulario
 $nombre=$_POST['nombre_colores'];
-$status = $_POST['status_colores'];
+//$status = $_POST['status_colores'];
 $id = $_POST['id'];
 
 
 //Construir la consulta
-$consulta = "UPDATE colores SET nombre_colores = '$nombre', status_colores = '$status' WHERE id_colores = $id";
+$consulta = "UPDATE colores SET nombre_colores = '$nombre' WHERE id_colores = $id";
 
 // echo $consulta;
 

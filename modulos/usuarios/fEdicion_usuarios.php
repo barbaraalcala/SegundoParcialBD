@@ -57,7 +57,7 @@ if(!isset($_SESSION["id"]) && !isset($_SESSION["nombre"]) && !isset($_SESSION["s
   <input type="hidden" name="id" id="id" value="<?php echo $id ?>">
 
 <div class="form-group">
-  <input type="submit"  name="btnEnviar" value ="Registra a tu usuario" class="btn btn-success">  
+  <input type="submit"  name="btnEnviar" value ="Edita tu usuario" class="btn btn-success">  
 </div>
 </form>
 

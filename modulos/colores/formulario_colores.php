@@ -32,7 +32,6 @@ if (!isset($_SESSION["id"]) && !isset($_SESSION["nombre"]) && !isset($_SESSION["
                         <input type="text" name="nombre_colores" id="nombre_colores">
                     </div>
 
-
                     <div class="form-group">
                         <input type="submit" name="btnEnviar" value="Agrega tu color">
                     </div>

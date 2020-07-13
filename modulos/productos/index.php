@@ -13,7 +13,7 @@ if (!isset($_SESSION["id"]) && !isset($_SESSION["nombre"]) && !isset($_SESSION["
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>GESTIÓN DE USUARIOS</title>
+    <title>PRODUCTOS</title>
     <!-- CSS only -->
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css">
 </head>
@@ -40,6 +40,7 @@ if (!isset($_SESSION["id"]) && !isset($_SESSION["nombre"]) && !isset($_SESSION["
                         <p class="card-text">PRODUCTOS DISPONIBLES: <?php echo $fila["stock_producto"]; ?></p>
                         <a href="fEdicion_productos.php?id=<?php echo $fila['id_producto']; ?>" class="card-link">Editar</a>
                         <a href="eliminar_productos.php?id=<?php echo $fila['id_producto']; ?>" class="card-link">Eliminar</a>
+                        <a href="comprar_productos.php?id=<?php echo $fila['id_producto']; ?>" class="card-link">Comprar</a>
                         
                     </div>
                 </div>
