@@ -21,7 +21,7 @@ $resultado_usuario = mysqli_query($mysqli, $consulta_usuario);
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Compras</title>
+    <title>COMPRAS</title>
     <!-- CSS only -->
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css">
 </head>
@@ -42,6 +42,7 @@ $resultado_usuario = mysqli_query($mysqli, $consulta_usuario);
                     <th scope="col">Precio</th>
                     <th scope="col">Comprado por:</th>
                     <th scope="col">Cantidad</th>
+                    <th scope="col">Colores</th>
                     <th scope="col">Accciones</th>
                 </tr>
             </thead>
@@ -63,7 +64,9 @@ $resultado_usuario = mysqli_query($mysqli, $consulta_usuario);
                         <td><?php echo $global_usuario; ?></td>
                
                         <td><?php echo $fila["cantidad"] ?></td>
+                        <td><?php echo $fila["cantidad"] ?></td>
                         <td>
+                            <a href="eliminar_compra.php?id=<?php echo $fila["id_compras"]; ?>" class="btn btn-success">Editar compra</a>
                             <a href="eliminar_compra.php?id=<?php echo $fila["id_compras"]; ?>" class="btn btn-danger">Eliminar compra</a>
                         </td>
                     </tr>
