@@ -78,6 +78,7 @@ $resultado_usuario = mysqli_query($mysqli, $consulta_usuario);
                         ?>
                         </td>
                         <td>
+                            <a href="fEdicion_compra.php?id_compra=<?php echo $fila["id_compras"]; ?>" class="btn btn-success">Editar cantidad</a>
                             <a href="eliminar_compra.php?id=<?php echo $fila["id_compras"]; ?>" class="btn btn-danger">Eliminar compra</a>
                         </td>
                     </tr>

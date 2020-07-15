@@ -48,8 +48,17 @@ if (!isset($_SESSION["id"]) && !isset($_SESSION["nombre"]) && !isset($_SESSION["
                         <p class="card-text">PRODUCTOS DISPONIBLES: <?php echo $fila["stock_producto"]; ?></p>
                         <a href="fEdicion_productos.php?id=<?php echo $fila['id_producto']; ?>" class="card-link">Editar</a>
                         <a href="eliminar_productos.php?id=<?php echo $fila['id_producto']; ?>" class="card-link">Eliminar</a>
+                        <?php
+                        if($fila["stock_producto"] > 0){
+                        ?>
                         <a href="../compras/insertar_compra.php?id=<?php echo $fila['id_producto']; ?>" class="card-link">Comprar</a>
-                        
+                        <?php
+                        }else{
+                            ?>
+                            <p>No disponible</p>
+                            <?php
+                        }
+                        ?>
                     </div>
                 </div>
 
