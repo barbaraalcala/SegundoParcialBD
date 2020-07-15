@@ -37,6 +37,14 @@ if (!isset($_SESSION["id"]) && !isset($_SESSION["nombre"]) && !isset($_SESSION["
                         <h5 class="card-title"><?php echo $fila["nombre_producto"]; ?></h5>
                         <h6 class="card-subtitle mb-2 text-muted">$ <?php echo $fila["precio_producto"]; ?></h6>
                         <p class="card-text"><?php echo $fila["descripcion_producto"]; ?></p>
+                        <p class="card-text">
+                        <?php 
+                          $consulta_colores = "SELECT * FROM colores WHERE id_colores=".$fila["id_colores"];
+                          $resultado_colores= mysqli_query($mysqli, $consulta_colores);
+                          $resultadoMinColores = mysqli_fetch_array($resultado_colores);
+                          echo $resultadoMinColores["nombre_colores"];
+                        ?>
+                        </p>
                         <p class="card-text">PRODUCTOS DISPONIBLES: <?php echo $fila["stock_producto"]; ?></p>
                         <a href="fEdicion_productos.php?id=<?php echo $fila['id_producto']; ?>" class="card-link">Editar</a>
                         <a href="eliminar_productos.php?id=<?php echo $fila['id_producto']; ?>" class="card-link">Eliminar</a>

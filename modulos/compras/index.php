@@ -13,6 +13,7 @@ $resultado_compras = mysqli_query($mysqli, $consulta_compras);
 $consulta_usuario = "SELECT * FROM usuarios where id_usuarios = $id_usuario";
 $resultado_usuario = mysqli_query($mysqli, $consulta_usuario);
 
+
 ?>
 
 <!DOCTYPE html>
@@ -64,9 +65,19 @@ $resultado_usuario = mysqli_query($mysqli, $consulta_usuario);
                         <td><?php echo $global_usuario; ?></td>
                
                         <td><?php echo $fila["cantidad"] ?></td>
-                        <td><?php echo $fila["cantidad"] ?></td>
                         <td>
-                            <a href="eliminar_compra.php?id=<?php echo $fila["id_compras"]; ?>" class="btn btn-success">Editar compra</a>
+                        <?php  
+                        $consulta_producto = "SELECT * FROM productos WHERE id_producto=".$fila["id_producto"];
+                        $resultado_producto = mysqli_query($mysqli, $consulta_producto);
+                        $resultadoMinProducto = mysqli_fetch_array($resultado_producto);
+                        
+                        $consulta_colores = "SELECT * FROM colores WHERE id_colores=".$resultadoMinProducto["id_colores"];
+                        $resultado_colores= mysqli_query($mysqli, $consulta_colores);
+                        $resultadoMinColores = mysqli_fetch_array($resultado_colores);
+                        echo $resultadoMinColores["nombre_colores"];
+                        ?>
+                        </td>
+                        <td>
                             <a href="eliminar_compra.php?id=<?php echo $fila["id_compras"]; ?>" class="btn btn-danger">Eliminar compra</a>
                         </td>
                     </tr>
